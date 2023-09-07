@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtjudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simple Cashier"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtjudul"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtnamapelanggan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Pelanggan:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editnamapelanggan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textSize="24sp"
+            android:hint="Nama Pelanggan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtnamapelanggan"/>
+
+        <TextView
+            android:id="@+id/txtnamabarang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Barang:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editnamapelanggan"/>
+
+        <EditText
+            android:id="@+id/editnamabarang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textSize="24sp"
+            android:hint="Nama Barang"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtnamabarang"/>
+
+        <TextView
+            android:id="@+id/txtjumlahbeli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Beli:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editnamabarang"/>
+
+        <EditText
+            android:id="@+id/editjumlahbeli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:inputType="number"
+            android:textSize="24sp"
+            android:hint="Jumlah Beli"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtjumlahbeli"/>
+
+        <TextView
+            android:id="@+id/txtharga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga Satuan:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editjumlahbeli"/>
+
+        <EditText
+            android:id="@+id/editharga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:inputType="number"
+            android:textSize="24sp"
+            android:hint="Harga Satuan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtharga"/>
+
+        <TextView
+            android:id="@+id/txtuangbayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uang Bayar:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editharga"/>
+
+        <EditText
+            android:id="@+id/edituangbayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:inputType="number"
+            android:textSize="24sp"
+            android:hint="Uang Bayar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtuangbayar"/>
+
+        <Button
+            android:id="@+id/btnproses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Process"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edituangbayar"/>
+
+        <TextView
+            android:id="@+id/txthargatotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harga Total:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnproses"/>
+
+        <TextView
+            android:id="@+id/txtuangkembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uang Kembali:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txthargatotal"/>
+
+        <TextView
+            android:id="@+id/txtbonus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bonus:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtuangkembali"/>
+
+        <TextView
+            android:id="@+id/txtketerangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keterangan:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtbonus"/>
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Reset Data"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtketerangan" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
